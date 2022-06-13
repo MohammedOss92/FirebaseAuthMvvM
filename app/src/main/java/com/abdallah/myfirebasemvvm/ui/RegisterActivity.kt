@@ -1,5 +1,6 @@
 package com.abdallah.myfirebasemvvm.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -49,5 +50,10 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
         })
+
+        binding.userIntent.setOnClickListener {
+            var intent = Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
